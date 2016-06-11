@@ -1,0 +1,23 @@
+{
+  "name": "les joies du mantis",
+  "authors": [
+    "method <method1990@gmail.com>"
+  ],
+  "description": "mantis world",
+  "main": "",
+  "license": "UNLICENCE",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.5",
+    "bootstrap": "^3.3.6",
+    "angular-route": "^1.5.6",
+    "bootstrap-switch": "^3.3.2"
+  }
+}

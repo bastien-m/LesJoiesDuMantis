@@ -1,0 +1,10 @@
+* {
+  color: #ecf0f1;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+}
+
+body, html {
+  height: 100%;
+}

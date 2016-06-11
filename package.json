@@ -1,0 +1,24 @@
+{
+  "name": "les-joies-du-mantis",
+  "version": "0.0.1",
+  "description": "best of des mantis",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mercierbastien@hotmail.fr",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "errorhandler": "^1.4.3",
+    "express": "^4.13.4",
+    "hat": "0.0.3",
+    "lodash": "^4.11.1",
+    "method-override": "^2.3.5",
+    "mongoose": "^4.4.14",
+    "passport": "^0.3.2",
+    "passport-localapikey": "0.0.3",
+    "path": "^0.12.7",
+    "winston": "^2.2.0"
+  }
+}

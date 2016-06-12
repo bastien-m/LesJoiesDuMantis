@@ -36,7 +36,7 @@ angular.module('MantisApp', ['ngRoute'])
         });
 
     }])
-    .run(['UserFactory', '$rootScope', 'location', function(UserFactory, $rootScope, $location) {
+    .run(['UserFactory', '$rootScope', '$location', function(UserFactory, $rootScope, $location) {
       $rootScope.utils = {
         isAuthenticate : typeof UserFactory.user !== 'undefined',
         isAdmin : $rootScope.isAuthenticate && UserFactory.user.isAdmin

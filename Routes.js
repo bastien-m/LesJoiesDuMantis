@@ -7,17 +7,19 @@ module.exports = function(app) {
   });
 
 
-  app.route('/article')
+  app.route('/article(/:id?)')
     .get(app.Controllers.ArticleController.get)
-    .post(app.Controllers.ArticleController.create)
-    .put(app.Controllers.ArticleController.update)
-    .delete(app.Controllers.ArticleController.delete);
+    .post(app.authenticate, app.Controllers.ArticleController.create)
+    .put(app.authenticate, app.Controllers.ArticleController.update)
+    .delete(app.authenticate, app.Controllers.ArticleController.delete);
 
 
   app.route('/user')
-    .get(app.Controllers.UserController.login)
-    .post(app.Controllers.UserController.create)
-    .put(app.Controllers.UserController.update)
-    .delete(app.Controllers.UserController.delete);
+    .post(app.authenticate, app.Controllers.UserController.create)
+    .put(app.authenticate, app.Controllers.UserController.update)
+    .delete(app.authenticate, app.Controllers.UserController.delete);
+
+  app.route('/login')
+    .post(app.Controllers.UserController.login);
 
 };

@@ -6,7 +6,7 @@ module.exports = function(app) {
 
   passport.use(new LocalAPIKeyStrategy(
     function(apikey, done) {
-      app.Models.AdminModel.findOne({ apikey: apikey }, function (err, user) {
+      app.Models.UserModel.findOne({ apikey: apikey }, function (err, user) {
         if (err) { return done(err); }
         if (!user) { return done(null, false); }
         return done(null, user);

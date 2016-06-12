@@ -1,0 +1,39 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#/">Les joies du mantis</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div ng-if="utils.isAdmin">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Administration <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#/user/create">Créer utilisateur</a></li>
+            <li><a href="#/user/update">Modifier utilisateur</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div ng-if="utils.isAuthenticate">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gérer contenu <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#/mantis/create">Créer mantis</a></li>
+            <li><a href="#/mantis/update">Modifier mantis</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div><!-- /.container-fluid -->
+</nav>
